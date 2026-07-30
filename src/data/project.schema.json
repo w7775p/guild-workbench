@@ -1,0 +1,446 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://guild-workbench.local/schema/project-0.1.json",
+  "title": "Guild Workbench Project v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "projectId",
+    "title",
+    "heroes",
+    "quests",
+    "events",
+    "outcomes",
+    "flags",
+    "sourceIssues"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "0.1" },
+    "projectId": { "$ref": "#/$defs/id" },
+    "title": { "type": "string", "minLength": 1 },
+    "heroes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/hero" }
+    },
+    "quests": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/quest" }
+    },
+    "events": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/event" }
+    },
+    "outcomes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/outcome" }
+    },
+    "flags": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/flag" }
+    },
+    "sourceIssues": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/sourceIssue" }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_-]*$"
+    },
+    "stringArray": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "idArray": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/id" }
+    },
+    "stats": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["combat", "investigation", "social"],
+      "properties": {
+        "combat": { "type": "integer", "minimum": 0 },
+        "investigation": { "type": "integer", "minimum": 0 },
+        "social": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "hero": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "role",
+        "impression",
+        "stats",
+        "level",
+        "gold",
+        "reputation",
+        "currentStatus",
+        "publicTraits",
+        "publicRelationshipsAndClues",
+        "hiddenTendency",
+        "triggerConditions",
+        "suppressConditions",
+        "reinforceConditions",
+        "behaviorPriorities",
+        "revealLevel",
+        "injuryRules",
+        "relationshipChangesAndPersonalEvents",
+        "characterArc",
+        "testPurpose"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "name": { "type": "string", "minLength": 1 },
+        "role": { "type": "string" },
+        "impression": { "type": "string" },
+        "stats": { "$ref": "#/$defs/stats" },
+        "level": { "type": "string" },
+        "gold": { "type": "integer", "minimum": 0 },
+        "reputation": { "type": "string" },
+        "currentStatus": { "type": "string" },
+        "publicTraits": { "$ref": "#/$defs/stringArray" },
+        "publicRelationshipsAndClues": { "type": "string" },
+        "hiddenTendency": { "type": "string" },
+        "triggerConditions": { "$ref": "#/$defs/stringArray" },
+        "suppressConditions": { "$ref": "#/$defs/stringArray" },
+        "reinforceConditions": { "$ref": "#/$defs/stringArray" },
+        "behaviorPriorities": { "$ref": "#/$defs/stringArray" },
+        "revealLevel": { "type": "string" },
+        "injuryRules": { "type": "string" },
+        "relationshipChangesAndPersonalEvents": { "type": "string" },
+        "characterArc": { "type": "string" },
+        "testPurpose": { "type": "string" }
+      }
+    },
+    "reward": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["guildGold", "sharedHeroGold", "items", "rawText"],
+      "properties": {
+        "guildGold": { "type": ["integer", "null"], "minimum": 0 },
+        "sharedHeroGold": { "type": ["integer", "null"], "minimum": 0 },
+        "items": { "$ref": "#/$defs/stringArray" },
+        "rawText": { "type": "string" }
+      }
+    },
+    "quest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "client",
+        "description",
+        "location",
+        "reward",
+        "duration",
+        "recommendedAbilities",
+        "apparentRisks",
+        "minPartySize",
+        "maxPartySize",
+        "visibleClues",
+        "appearanceCondition",
+        "expiryCondition",
+        "truth",
+        "centralConflict",
+        "keyAbilities",
+        "keyTraitsAndCombinations",
+        "eventIds",
+        "outcomeIds",
+        "followUpFlags",
+        "designPurpose",
+        "sourceStatus"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "title": { "type": "string", "minLength": 1 },
+        "client": { "type": "string" },
+        "description": { "type": "string" },
+        "location": { "type": "string" },
+        "reward": { "$ref": "#/$defs/reward" },
+        "duration": { "type": "string" },
+        "recommendedAbilities": { "$ref": "#/$defs/stringArray" },
+        "apparentRisks": { "type": "string" },
+        "minPartySize": { "type": "integer", "minimum": 1 },
+        "maxPartySize": { "type": "integer", "minimum": 1 },
+        "visibleClues": { "$ref": "#/$defs/stringArray" },
+        "appearanceCondition": { "type": "string" },
+        "expiryCondition": { "type": "string" },
+        "truth": { "type": "string" },
+        "centralConflict": { "type": "string" },
+        "keyAbilities": { "type": "string" },
+        "keyTraitsAndCombinations": { "type": "string" },
+        "eventIds": { "$ref": "#/$defs/idArray" },
+        "outcomeIds": { "$ref": "#/$defs/idArray" },
+        "followUpFlags": { "$ref": "#/$defs/idArray" },
+        "designPurpose": { "type": "string" },
+        "sourceStatus": { "enum": ["complete", "partial"] }
+      }
+    },
+    "condition": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "conditions"],
+          "properties": {
+            "type": { "enum": ["all", "any"] },
+            "conditions": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/condition" }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "heroId"],
+          "properties": {
+            "type": { "const": "partyHasHero" },
+            "heroId": { "$ref": "#/$defs/id" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "stat", "value"],
+          "properties": {
+            "type": { "const": "partyStatAtLeast" },
+            "stat": { "enum": ["combat", "investigation", "social"] },
+            "value": { "type": "integer", "minimum": 0 }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "eventId", "optionId"],
+          "properties": {
+            "type": { "const": "optionSelected" },
+            "eventId": { "$ref": "#/$defs/id" },
+            "optionId": { "$ref": "#/$defs/id" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "flagId", "value"],
+          "properties": {
+            "type": { "const": "flagEquals" },
+            "flagId": { "$ref": "#/$defs/id" },
+            "value": { "type": ["boolean", "number", "string"] }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "heroId", "status"],
+          "properties": {
+            "type": { "const": "heroStatusEquals" },
+            "heroId": { "$ref": "#/$defs/id" },
+            "status": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "effect": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "flagId", "value"],
+          "properties": {
+            "type": { "const": "setFlag" },
+            "flagId": { "$ref": "#/$defs/id" },
+            "value": { "type": ["boolean", "number", "string"] }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "amount"],
+          "properties": {
+            "type": { "enum": ["addGuildGold", "addReputation"] },
+            "amount": { "type": "integer" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "heroId", "status"],
+          "properties": {
+            "type": { "const": "setHeroStatus" },
+            "heroId": { "$ref": "#/$defs/id" },
+            "status": { "type": "string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "fromHeroId", "toHeroId", "amount"],
+          "properties": {
+            "type": { "const": "changeRelationship" },
+            "fromHeroId": { "$ref": "#/$defs/id" },
+            "toHeroId": { "$ref": "#/$defs/id" },
+            "amount": { "type": "integer" },
+            "note": { "type": "string" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "contentId"],
+          "properties": {
+            "type": { "const": "unlockContent" },
+            "contentId": { "$ref": "#/$defs/id" }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "text"],
+          "properties": {
+            "type": { "const": "note" },
+            "text": { "type": "string" }
+          }
+        }
+      ]
+    },
+    "eventOption": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "effects"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "label": { "type": "string", "minLength": 1 },
+        "visibleCondition": { "$ref": "#/$defs/condition" },
+        "effects": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/effect" }
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "questId",
+        "triggerDescription",
+        "visibleText",
+        "options",
+        "immediateEffects",
+        "characterReactions",
+        "outcomeImpact",
+        "testObservation"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "questId": { "$ref": "#/$defs/id" },
+        "triggerDescription": { "type": "string" },
+        "visibleText": { "type": "string" },
+        "options": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/eventOption" }
+        },
+        "immediateEffects": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/effect" }
+        },
+        "characterReactions": { "type": "string" },
+        "outcomeImpact": { "type": "string" },
+        "testObservation": { "type": "string" }
+      }
+    },
+    "outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "questId",
+        "priority",
+        "condition",
+        "rawCondition",
+        "grade",
+        "report",
+        "causalExplanation",
+        "guildChanges",
+        "heroChanges",
+        "relationshipChanges",
+        "writtenFlags",
+        "unlockedContent",
+        "followUpEvents",
+        "effects",
+        "testObservation"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "questId": { "$ref": "#/$defs/id" },
+        "priority": { "type": "integer" },
+        "condition": { "$ref": "#/$defs/condition" },
+        "rawCondition": { "type": "string" },
+        "grade": { "type": "string" },
+        "report": { "type": "string" },
+        "causalExplanation": { "type": "string" },
+        "guildChanges": { "type": "string" },
+        "heroChanges": { "type": "string" },
+        "relationshipChanges": { "type": "string" },
+        "writtenFlags": { "$ref": "#/$defs/idArray" },
+        "unlockedContent": { "$ref": "#/$defs/idArray" },
+        "followUpEvents": { "$ref": "#/$defs/idArray" },
+        "effects": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/effect" }
+        },
+        "testObservation": { "type": "string" }
+      }
+    },
+    "flag": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "valueType", "initialValue", "description"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "valueType": { "enum": ["boolean", "number", "string"] },
+        "initialValue": { "type": ["boolean", "number", "string"] },
+        "description": { "type": "string" }
+      }
+    },
+    "sourceIssue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "severity",
+        "entityType",
+        "entityId",
+        "field",
+        "code",
+        "message",
+        "sourceText"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "severity": { "enum": ["warning", "gap"] },
+        "entityType": { "enum": ["hero", "quest", "event", "outcome"] },
+        "entityId": { "$ref": "#/$defs/id" },
+        "field": { "type": "string" },
+        "code": {
+          "enum": [
+            "missing-structure",
+            "unresolved-reference",
+            "unmapped-condition",
+            "source-ambiguity"
+          ]
+        },
+        "message": { "type": "string" },
+        "sourceText": { "type": "string" },
+        "unresolvedIds": { "$ref": "#/$defs/idArray" }
+      }
+    }
+  }
+}

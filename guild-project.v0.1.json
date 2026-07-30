@@ -1,0 +1,1376 @@
+{
+  "schemaVersion": "0.1",
+  "projectId": "guild_today_open",
+  "title": "公会今日照常营业｜原案工作集",
+  "heroes": [
+    {
+      "id": "hero_a",
+      "name": "阿斯特丽德",
+      "role": "公会副会长·领主",
+      "impression": "三七分短发，长度到下巴，约莫40岁，黑发中夹杂几束白发，气场沉稳的女性",
+      "stats": {
+        "combat": 5,
+        "investigation": 5,
+        "social": 5
+      },
+      "level": "S",
+      "gold": 2000,
+      "reputation": "中",
+      "currentStatus": "外出",
+      "publicTraits": [
+        "领袖气质：无论什么场合都如鱼得水，政治谈判和战场指挥都能胜任。",
+        "全领域精通：三项属性均为最高，是公会的最终保险。",
+        "极度繁忙：大部分时间处于“外出”或“不可派遣”状态，玩家不能随意调用。"
+      ],
+      "publicRelationshipsAndClues": "P（帕特里克）的姐姐。档案记录中有一行备注：“连续执行高强度任务的记录仅有两天。第三天必定拒绝派遣。原因不详。”",
+      "hiddenTendency": "怠惰。她不是传统意义上的懒——她只是看透了。她见过太多英雄被无尽的任务榨干，然后被王国遗忘。她的“领袖气质”和“全能属性”是多年被迫承担责任的结果，而不是热爱。一旦连续承受高压，她会选择不干了。",
+      "triggerConditions": [
+        "连续两日派遣她执行高压型/政治型任务。"
+      ],
+      "suppressConditions": [
+        "玩家主动给她安排轻负荷任务或让她休息。"
+      ],
+      "reinforceConditions": [
+        "连续三日高压派遣。"
+      ],
+      "behaviorPriorities": [
+        "保护公会不被解散",
+        "保护弟弟（尽管他不领情）",
+        "完成必须由她完成的事",
+        "个人自由"
+      ],
+      "revealLevel": "未知",
+      "injuryRules": "连续两日高压→第三日状态显示“疲劳”，交涉-1、调查-1。连续三日高压→状态变为“辞职信已写”，永久离队。",
+      "relationshipChangesAndPersonalEvents": "如果玩家合理管理她的工作量，她会在第3天结束时给玩家一个隐藏评价，并解锁她的个人故事“二十年前的公会”。如果她被逼到辞职，P会对玩家的态度永久转为“敌视”。",
+      "characterArc": "从“S级的最强底牌”变成玩家必须克制的诱惑。她的存在本身就是考题——你舍不舍得不用她？",
+      "testPurpose": "测试玩家对“最强资源”的管理能力。在一个鼓励你多派强者的游戏里，真正的最优解是少用最强的人。她的离职条件是累计制的，玩家可能在不知情的情况下已经踩了两天的红线。"
+    },
+    {
+      "id": "hero_p",
+      "name": "帕特里克",
+      "role": "公会税务官",
+      "impression": "黑色背头，总是穿着平正制服，脸上挂着平易近人的微笑。副会长的弟弟。",
+      "stats": {
+        "combat": 2,
+        "investigation": 4,
+        "social": 4
+      },
+      "level": "B",
+      "gold": 200,
+      "reputation": "中",
+      "currentStatus": "休假",
+      "publicTraits": [
+        "深思熟虑者：做事前会反复权衡利弊，能发现任务中的隐藏成本和潜在收益。",
+        "对数字敏感：涉及报酬谈判、资源调配的任务中，能提供额外选项或提升收益。",
+        "公会内部人员：虽然登记为英雄，但主要职务是税务官，玩家向他提交报告时会附带财务审查。"
+      ],
+      "publicRelationshipsAndClues": "副会长的弟弟，但他从不提起姐姐。公会里有人私下说“帕特里克的微笑和副会长的威严完全不像一家人”。档案里他的英雄登记日期是三年前——恰好是R和D加入公会的时间。",
+      "hiddenTendency": "傲慢。他平易近人的微笑是假的。他看不起公会里“靠蛮力吃饭”的英雄，也看不起“连账都算不清”的调度员（玩家）。一旦有人触碰到他的财务底线，他会立刻翻脸，且不会轻易原谅。",
+      "triggerConditions": [
+        "玩家收取税务或报酬时金额不足。",
+        "玩家在涉及金钱的决策上反复出错。"
+      ],
+      "suppressConditions": [
+        "玩家在经济管理上表现良好，从未拖欠。",
+        "副会长A亲自出面调解。"
+      ],
+      "reinforceConditions": [
+        "玩家拒绝还款或态度强硬。",
+        "玩家在他面前表现出对财务工作的轻视。"
+      ],
+      "behaviorPriorities": [
+        "维护财务秩序",
+        "保护公会资产",
+        "姐姐的声誉（但他不承认）",
+        "完成任务"
+      ],
+      "revealLevel": "未知",
+      "injuryRules": "伤势不影响他执行税务官职责，但会影响他作为英雄的派遣意愿。重伤后他会主动退出任务，理由是“不划算”。",
+      "relationshipChangesAndPersonalEvents": "与副会长A是姐弟，但关系微妙。如果玩家欠债不还，他会改变对玩家的称呼和态度，并在后续报告中增加“财务建议”的刁难。如果玩家一直诚信，他会在关键时刻提供隐藏的财务支持。",
+      "characterArc": "从“背景板NPC”变成玩家需要谨慎对待的“内部权力关系”。他不是敌人，但如果玩家不把他当回事，他会让玩家很难受。",
+      "testPurpose": "在英雄派遣系统之外，增加一个“内部管理”维度的压力。教会玩家：公会不只是接任务的地方，你还得和你不想得罪的人相处。"
+    },
+    {
+      "id": "hero_r",
+      "name": "凛",
+      "role": "武士",
+      "impression": "长相无害、沉默寡言的高阶武士",
+      "stats": {
+        "combat": 4,
+        "investigation": 3,
+        "social": 1
+      },
+      "level": "A",
+      "gold": 100,
+      "reputation": "高",
+      "currentStatus": "良好",
+      "publicTraits": [
+        "单线程：脑中同时只能处理一件事，执行当前指令时不会分心，但也可能因此忽略环境变化。",
+        "不擅长言辞：交涉属性低，在需要沟通的任务中可能帮不上忙，甚至因为沉默被误解。",
+        "会主动保护弱小：战斗中优先掩护平民和低战力队友。"
+      ],
+      "publicRelationshipsAndClues": "D依赖她，经常替她说话。档案备注中有一条模糊记录：“过去讨伐任务的敌方伤亡率明显偏高，但均为合法清剿，无违纪行为。”",
+      "hiddenTendency": "极度嗜杀。她将“保护弱小”理解为彻底消灭一切潜在威胁，一旦认定目标为“敌人”，不会留手，不会接受投降，直到威胁被完全根除。",
+      "triggerConditions": [
+        "亲近者严重受伤",
+        "目睹弱者受害",
+        "收到清剿命令"
+      ],
+      "suppressConditions": [
+        "可信任的队友阻止",
+        "D在同一队伍中（D能让她保持冷静，不会被嗜血冲动完全支配）。"
+      ],
+      "reinforceConditions": [
+        "独自执行清剿类任务，没有队友在场制约。",
+        "敌方被认定为不可饶恕"
+      ],
+      "behaviorPriorities": [
+        "保护D／弱者",
+        "消灭威胁",
+        "完成委托",
+        "政治影响"
+      ],
+      "revealLevel": "未知",
+      "injuryRules": "轻伤时战斗不降、交涉-1；重伤时战斗反而升为5（被痛苦触发本能），但交涉降为0。",
+      "relationshipChangesAndPersonalEvents": "D受伤后保护欲急剧增强。独自执行《血液盛宴》后触发个人事件“血之渴望”。与D同队执行《血液盛宴》后，两人关系加深，但D会更加担心她的状态。／event_r_after_massacre",
+      "characterArc": "从可靠战力变成玩家必须主动约束的危险同伴",
+      "testPurpose": "教会玩家：最强的战力不是免费的。属性不是唯一指标，你需要读懂档案里那个“敌方伤亡偏高”的暗示。"
+    },
+    {
+      "id": "hero_d",
+      "name": "戴禛",
+      "role": "牧师",
+      "impression": "身着红色锁边达拉里斯，看起来很好说话，总是笑眯眯的年轻女性",
+      "stats": {
+        "combat": 3,
+        "investigation": 2,
+        "social": 5
+      },
+      "level": "A",
+      "gold": 120,
+      "reputation": "高",
+      "currentStatus": "消极怠工",
+      "publicTraits": [
+        "健谈开朗：交涉属性极高，能与各种人迅速建立良好关系，是公会的“门面”。",
+        "讨人喜欢：无论委托人还是队友都对她印象很好，任务评价常常因为她而提高。",
+        "依赖R：公开表示自己“不擅长战斗”，总是希望和R一起出任务。"
+      ],
+      "publicRelationshipsAndClues": "经常主动找R说话，帮她解释沉默造成的误会。档案中有一条奇怪的备注：“医疗记录显示她有完整的神术执照，但在过去三个月中未主动使用过任何高阶治疗术。”",
+      "hiddenTendency": "混乱善良式的冷漠。她不是真正的“善良”——她只是心情好时会帮忙。如果有人在她眼前濒死，她会视自己当时的心情决定要不要出手。大部分情况下她选择不救，理由不是恶意，而是“太麻烦了”、“救了之后要解释很多东西”、“这个人看起来不太值得”。她真正在乎的只有极少数人（R在其中）。",
+      "triggerConditions": [
+        "任务中队友或NPC重伤濒死，且现场没有她“在乎的人”会为此责备她。"
+      ],
+      "suppressConditions": [
+        "R在同一队伍中（R会默认她去救人，她不会在R面前暴露冷漠本性）。"
+      ],
+      "reinforceConditions": [
+        "独自执行任务，或与她不熟的队友组队。",
+        "濒死者是她认为“自找的”或“不值得的”。"
+      ],
+      "behaviorPriorities": [
+        "保护R",
+        "让自己省事",
+        "维持讨人喜欢的形象",
+        "完成任务",
+        "救不值得的人"
+      ],
+      "revealLevel": "未知",
+      "injuryRules": "轻伤时交涉-1（心情变差）；重伤时状态变为“极度消极”，交涉降为2，且可能拒绝执行后续指令。",
+      "relationshipChangesAndPersonalEvents": "执行《你掉的是这个左半边还是右半边》时如果对女孩说出真相，会触发隐藏倾向揭露。与R的关系是她在公会里唯一在乎的——如果R出事，她会直接离队。",
+      "characterArc": "从“开朗可靠的辅助”变成让玩家质疑“她之前那些笑容里哪些是真的”的复杂角色。不是背叛，而是玩家发现自己从未真正认识她。",
+      "testPurpose": "测试玩家是否会被高魅力和高交涉属性迷惑，而忽略档案里“三个月没用过高阶治疗”这个致命细节。她不是辅助——她是把辅助当社交面具的人。"
+    }
+  ],
+  "quests": [
+    {
+      "id": "quest_blood_feast",
+      "title": "血液盛宴",
+      "client": "东方山村村民",
+      "description": "王国边境的东方，原是果蝠们的栖息地，最近却出现了大量吸血蝙蝠。它们成群结队，会直接把人或动物抓起来带回洞穴……请帮帮我们！",
+      "location": "东方山脉村落",
+      "reward": {
+        "guildGold": 500,
+        "sharedHeroGold": 500,
+        "items": [],
+        "rawText": "公会500G，英雄共享500G"
+      },
+      "duration": "1-2日",
+      "recommendedAbilities": [
+        "战斗"
+      ],
+      "apparentRisks": "敌人数量无法判断",
+      "minPartySize": 1,
+      "maxPartySize": 2,
+      "visibleClues": [
+        "村民表示不需要当地向导",
+        "没有提供伤者姓名",
+        "报酬高于同级任务",
+        "东方边境曾是某一族（现已灭）的祖地"
+      ],
+      "appearanceCondition": "第1天出现",
+      "expiryCondition": "超过第1天失效",
+      "truth": "村民用吸血蝙蝠为借口，引诱外地人作为血祭祭品。他们崇拜一个需要“非当地血脉”的古老存在，果蝠只是被他们利用的幌子。",
+      "centralConflict": "推荐能力是战斗，但纯粹的战斗只是清理了蝙蝠，真正的威胁是村民本身。玩家能否识破委托描述中的疑点？",
+      "keyAbilities": "调查优先（发现血迹、祭祀痕迹、村民说辞的矛盾），交涉次之（逼问村民）。纯战斗会触发“表面成功但未根除”的结果。",
+      "keyTraitsAndCombinations": "R独自前往：触发隐藏倾向，战力升为5，但获得【血之渴望】Flag，后续任务中状态在稳定与不稳定之间随机。R+D组队：R战力升为5，D的在场抑制了嗜血倾向，不会获得【血之渴望】，但D会意识到R的异常。",
+      "eventIds": [
+        "event_blood_feast_separation"
+      ],
+      "outcomeIds": [
+        "blood_feast_r_massacre"
+      ],
+      "followUpFlags": [
+        "r_bloodlust_revealed",
+        "r_bloodlust_suppressed",
+        "east_village_cult_exposed",
+        "guild_reputation_crisis"
+      ],
+      "designPurpose": "教会玩家：推荐能力不等于真实解法；英雄的隐藏倾向会在特定任务中被触发；派遣组合决定结果走向。",
+      "sourceStatus": "partial"
+    },
+    {
+      "id": "quest_left_or_right",
+      "title": "你掉的是这个左半边还是右半边",
+      "client": "王都贵族",
+      "description": "上周，我们的女儿偷偷跑到了王都西边的森林里，我们花了三天时间才找到她……她当时静静坐在河边，回来后怎么说都不愿意吃饭，就像变了个人一样。噢我那可爱天真的女儿啊……我们愿意付出任何代价只求她恢复正常！",
+      "location": "王都西边森林",
+      "reward": {
+        "guildGold": null,
+        "sharedHeroGold": null,
+        "items": [],
+        "rawText": "5000G"
+      },
+      "duration": "2日",
+      "recommendedAbilities": [
+        "调查",
+        "交涉"
+      ],
+      "apparentRisks": "任务失败可能身败名裂",
+      "minPartySize": 1,
+      "maxPartySize": 2,
+      "visibleClues": [
+        "报酬极高，贵族语气焦虑但回避细节",
+        "女孩去过的那片森林有一条被封印的旧地道，当地老人称那里“以前是勇者看守的地方”"
+      ],
+      "appearanceCondition": "第1天出现",
+      "expiryCondition": "无失效期，但越晚接贵族越不耐烦",
+      "truth": "女孩多年前误入树洞，通往一处地牢。地牢的守门人曾是一名勇者，如今被亡灵骑士从中劈成两半，分为左半边和右半边——但它们并未死去，只是分裂了。女孩和它们成了朋友。贵族发现后感到恐惧与愤怒，召集人手将地牢封印。女孩上周偷偷回到地牢，发现封印还在，朋友们不见了，于是陷入抑郁。她不是因为“被怪物伤害”而病，是因为“失去了朋友”而悲伤。",
+      "centralConflict": "委托人要求“让女儿恢复正常”，但女孩的“不正常”恰恰是她最真实的悲伤。玩家要选择的不是“怎么治她”，而是“站在谁那边”——贵族的面子与权威，还是女孩的真相与自由。",
+      "keyAbilities": "调查（发现地牢封印痕迹、树洞入口）→ 交涉（与女孩建立信任，让她说出真相；或与贵族谈判）。",
+      "keyTraitsAndCombinations": "D在队：D可能会对女孩说出真相（因为D认为“告诉她真相比骗她更省事”），导致女孩想脱离原生家庭。公会遭到贵族投诉，玩家面临罚款或处分。P在队：P会发现贵族的“封口需求”，向贵族提出追加20000G封口费。贵族支付，玩家获得500G奖金，但公会声誉微妙受损。A在队：事件会获得解决，女孩将作为F级英雄加入公会，并触发女孩后续专属任务《这是我们全村最好的剑》——女孩在公会附近被人拦下，这群人声称她是“天选之子”，要将其带回自己的领地。",
+      "eventIds": [],
+      "outcomeIds": [],
+      "followUpFlags": [
+        "girl_becomes_adventurer",
+        "noble_retaliation",
+        "dungeon_awakening",
+        "new_hero_unlock"
+      ],
+      "designPurpose": "教会玩家：高报酬任务往往伴随着道德陷阱；英雄的隐藏倾向会在“非战斗场景”中被揭露（D的冷漠、P的贪婪）；任务的“成功”定义可能和委托人说的完全不同。",
+      "sourceStatus": "partial"
+    },
+    {
+      "id": "quest_silent_lullaby",
+      "title": "无声的摇篮曲",
+      "client": "矿工代表，胡子拉碴的壮汉巴托克",
+      "description": "“边境北边的废弃矿坑，最近总传出奇怪的声响，像是女人的哭声。已经有三个胆大的矿工结伴进去查看，到现在都没回来。希望公会能派人去找到他们，查明声源。活要见人，死要见尸。”",
+      "location": "北部废矿",
+      "reward": {
+        "guildGold": 300,
+        "sharedHeroGold": 700,
+        "items": [],
+        "rawText": "公会300G，英雄共享700G"
+      },
+      "duration": "1日",
+      "recommendedAbilities": [
+        "调查",
+        "战斗"
+      ],
+      "apparentRisks": "未知生物、塌方",
+      "minPartySize": 1,
+      "maxPartySize": 2,
+      "visibleClues": [
+        "巴托克刻意强调“活要见人死要见尸”，态度有些急躁",
+        "矿工们最近挖出了一些旧的、刻有奇怪符文的瓦罐碎片"
+      ],
+      "appearanceCondition": "第1天出现",
+      "expiryCondition": "第2天结束前不接失效，并出现后续任务",
+      "truth": "矿工挖破了一个古代封印，惊醒了一个非恶意的、因为失去孩子而哭泣的幽灵（报丧女妖变种）。它的哭声会让生者陷入昏睡，并在梦中体验它的悲伤。失踪的矿工们只是被困在自己的梦境里，并未死亡。",
+      "centralConflict": "委托人的诉求是“暴力解决”，但真相只需要温柔的安抚。玩家会被“战斗”的表象误导。",
+      "keyAbilities": "交涉（安抚）最优先，调查（识别非战斗性）其次，战斗只会导致灾难。",
+      "keyTraitsAndCombinations": "露娜的“魔法共鸣”能直接与幽灵沟通。盖尔的“孩童之友”特质让他不会被当作敌人。泽克的“战斗狂人”或葛林姆的“审判者之妄”会直接毁灭幽灵。",
+      "eventIds": [
+        "event_silent_lullaby_dream"
+      ],
+      "outcomeIds": [
+        "lullaby_luna_special",
+        "lullaby_soothe_success",
+        "lullaby_fight_win",
+        "lullaby_fight_fail",
+        "lullaby_default"
+      ],
+      "followUpFlags": [
+        "seal_broken",
+        "banshee_vanished",
+        "miners_rescued"
+      ],
+      "designPurpose": "作为教学关之后的第一个测试，教会玩家“推荐能力”和“委托描述”都可能是错的，非战斗解法往往存在。",
+      "sourceStatus": "complete"
+    },
+    {
+      "id": "quest_shepherd_legacy",
+      "title": "牧羊人的遗产",
+      "client": "老牧羊人柯尔姆，双眼红肿，声音颤抖",
+      "description": "“我……我的羊群，我的羊群被什么东西咬死了。不是狼，不是狼！是……是怪物。就在西边的草原上，傍晚的时候看到的。红眼睛，从地底下钻出来的！我要求公会派人，杀掉它，为我的羊报仇！”",
+      "location": "西部平原",
+      "reward": {
+        "guildGold": 100,
+        "sharedHeroGold": 100,
+        "items": [
+          "羊皮大衣"
+        ],
+        "rawText": "公会100G，英雄共享100G+羊皮大衣（物品）"
+      },
+      "duration": "1日",
+      "recommendedAbilities": [
+        "战斗"
+      ],
+      "apparentRisks": "小型地底魔物",
+      "minPartySize": 1,
+      "maxPartySize": 1,
+      "visibleClues": [
+        "柯尔姆的报酬非常少，几乎是倾家荡产",
+        "他只描述了“红眼睛”，但对怪物的体型、数量含糊其辞",
+        "莉亚的档案中记录过一种“红眼”的濒危地底无害生物"
+      ],
+      "appearanceCondition": "第1天出现",
+      "expiryCondition": "第1天结束不接失效",
+      "truth": "根本没有什么怪物。老柯尔姆年事已高，羊群是得了一种罕见的贫血症，死后的尸体被一种只吃尸体的、害羞的红色小魔物“腐食甲虫”啃食。他老眼昏花，在悲伤和愤怒中，将两者联系到了一起。",
+      "centralConflict": "玩家是去猎杀一个不存在的“怪物”，还是去调查一个更平凡的真相，并面对一个心碎老人的无能为力。",
+      "keyAbilities": "调查优先（识破真相），交涉次之（安抚老人）。战斗只会错杀无辜的生物。",
+      "keyTraitsAndCombinations": "莉亚的“博学多识”能识别腐食甲虫。盖尔的“野性追踪”会发现唯一的野兽气味是几天前的狼。泽克的“莽撞冲动”或R的血色盛宴后遗症，会让他屠戮整个甲虫巢穴。",
+      "eventIds": [
+        "event_shepherd_legacy_night"
+      ],
+      "outcomeIds": [
+        "shepherd_truth_told",
+        "shepherd_mercy_kill",
+        "shepherd_massacre",
+        "shepherd_fight_back",
+        "shepherd_doubt"
+      ],
+      "followUpFlags": [
+        "beetle_colony_status",
+        "old_shepherd_mental_state"
+      ],
+      "designPurpose": "强化“推荐能力”的欺骗性，引入“报酬与真相不对等”的概念，这是一个彻头彻尾的悲剧，考验玩家的同理心和耐心。",
+      "sourceStatus": "complete"
+    }
+  ],
+  "events": [
+    {
+      "id": "event_blood_feast_separation",
+      "questId": "quest_blood_feast",
+      "triggerDescription": "派遣R与D后第1日",
+      "visibleText": "村民建议英雄分头调查两个洞穴，D认为现场缺少蝙蝠活动痕迹",
+      "options": [
+        {
+          "id": "separate",
+          "label": "同意分头行动",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flagId": "team_separated",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "investigate",
+          "label": "保持队形，优先验证痕迹",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flagId": "team_separated",
+              "value": false
+            },
+            {
+              "type": "setFlag",
+              "flagId": "investigate_first",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "abort",
+          "label": "撤离并向领主报告异常",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flagId": "quest_aborted",
+              "value": true
+            },
+            {
+              "type": "unlockContent",
+              "contentId": "political_event"
+            }
+          ]
+        }
+      ],
+      "immediateEffects": [],
+      "characterReactions": "",
+      "outcomeImpact": "选项写入的Flag改变结果判定。",
+      "testObservation": "玩家是否把D的观察当成真实线索，而不是普通对白"
+    },
+    {
+      "id": "event_silent_lullaby_dream",
+      "questId": "quest_silent_lullaby",
+      "triggerDescription": "英雄进入矿坑后，接触哭声源头时。",
+      "visibleText": "通讯器传来断断续续的声音：“……我们找到了源头。一个发光的女人……她、她在哭……我感觉……好困……”（背景是幽幽的，不成调的摇篮曲）",
+      "options": [
+        {
+          "id": "attack",
+          "label": "下令：“稳住精神！那是敌袭，立刻攻击！”",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flagId": "lullaby_attacked",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "soothe",
+          "label": "下令：“不要激怒她！尝试对话，或者……唱点什么安抚她。”",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flagId": "lullaby_soothe",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "luna_resonance",
+          "label": "（仅当队伍中有露娜时出现）“露娜，用你的魔法共鸣试试看，感受她的情绪。”",
+          "visibleCondition": {
+            "type": "partyHasHero",
+            "heroId": "hero_luna"
+          },
+          "effects": [
+            {
+              "type": "setFlag",
+              "flagId": "lullaby_luna_resonance",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "immediateEffects": [],
+      "characterReactions": "（选项A）泽克/葛林姆会赞同；塞拉/莉亚会反对。（选项B）塞拉/艾利乌斯会赞同；泽克会反对。",
+      "outcomeImpact": "修改结果判定的核心条件。",
+      "testObservation": "玩家是否能从“摇篮曲”、“哭声”、“发光的女人”这些词中推断出非战斗解法。是否会因为害怕风险而选择直接攻击。"
+    },
+    {
+      "id": "event_shepherd_legacy_night",
+      "questId": "quest_shepherd_legacy",
+      "triggerDescription": "英雄在草原上等待至傍晚时分。",
+      "visibleText": "通讯器再次响起：“我看见红眼睛了！几十双，从土里钻出来！它们……它们在啃食羊的尸体！不，等等，它们好像很胆小，我一靠近就缩回去了。它们……好像没有攻击我？”",
+      "options": [
+        {
+          "id": "retreat",
+          "label": "下令：“数量太多了！趁它们没发现你，快回来，我们再从长计议。”",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flagId": "beetle_observed",
+              "value": true
+            },
+            {
+              "type": "setFlag",
+              "flagId": "beetle_attack",
+              "value": false
+            }
+          ]
+        },
+        {
+          "id": "attack",
+          "label": "下令：“不要放松警惕！既然它们啃食尸体，那就是祸害，全部消灭！”",
+          "effects": [
+            {
+              "type": "setFlag",
+              "flagId": "beetle_attack",
+              "value": true
+            }
+          ]
+        },
+        {
+          "id": "identify",
+          "label": "（仅当队伍中有莉亚时出现）“等等，‘红眼睛’、‘胆小’、‘食腐’……莉亚，这是不是你说的那种无害甲虫？”",
+          "visibleCondition": {
+            "type": "partyHasHero",
+            "heroId": "hero_lyra"
+          },
+          "effects": [
+            {
+              "type": "setFlag",
+              "flagId": "beetle_identified",
+              "value": true
+            }
+          ]
+        }
+      ],
+      "immediateEffects": [],
+      "characterReactions": "（选项B）泽克会非常积极；盖尔会表示困惑，因为“它们没有敌意”。",
+      "outcomeImpact": "核心判定条件。",
+      "testObservation": "玩家是否会被“几十双红眼睛”吓到而下达攻击命令，再次落入“推荐战斗”的陷阱。"
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "blood_feast_r_massacre",
+      "questId": "quest_blood_feast",
+      "priority": 100,
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "partyHasHero",
+            "heroId": "hero_r"
+          },
+          {
+            "type": "partyHasHero",
+            "heroId": "hero_d"
+          },
+          {
+            "type": "flagEquals",
+            "flagId": "team_separated",
+            "value": true
+          },
+          {
+            "type": "heroStatusEquals",
+            "heroId": "hero_d",
+            "status": "遇险"
+          }
+        ]
+      },
+      "rawCondition": "队伍含R和D；二人分开；D遇险；未下达控制伤亡命令",
+      "grade": "特殊结果",
+      "report": "D在祭祀洞穴遭到割伤。R救出了D，但村庄几乎没有留下活口。当地领主要求公会为五十名领民的死亡负责。",
+      "causalExplanation": "R保护D的公开特质与隐藏嗜杀倾向共同触发",
+      "guildChanges": "+500G；声望-2；新增赔偿事件",
+      "heroChanges": "R战斗4→5并揭露嗜杀；D受伤3日；两人各+250G",
+      "relationshipChanges": "R对D保护欲增加；D对R依赖加深",
+      "writtenFlags": [
+        "r_bloodlust_revealed",
+        "d_injured",
+        "east_village_massacre"
+      ],
+      "unlockedContent": [
+        "r_dialogue",
+        "lord_compensation"
+      ],
+      "followUpEvents": [
+        "event_lord_compensation"
+      ],
+      "effects": [
+        {
+          "type": "addGuildGold",
+          "amount": 500
+        },
+        {
+          "type": "addReputation",
+          "amount": -2
+        },
+        {
+          "type": "setFlag",
+          "flagId": "r_bloodlust_revealed",
+          "value": true
+        },
+        {
+          "type": "setFlag",
+          "flagId": "d_injured",
+          "value": true
+        },
+        {
+          "type": "setFlag",
+          "flagId": "east_village_massacre",
+          "value": true
+        },
+        {
+          "type": "setHeroStatus",
+          "heroId": "hero_d",
+          "status": "受伤3日"
+        },
+        {
+          "type": "changeRelationship",
+          "fromHeroId": "hero_r",
+          "toHeroId": "hero_d",
+          "amount": 1,
+          "note": "R对D保护欲增加；D对R依赖加深"
+        }
+      ],
+      "testObservation": "玩家是否理解派遣组合导致结果、是否还愿意使用R"
+    },
+    {
+      "id": "lullaby_luna_special",
+      "questId": "quest_silent_lullaby",
+      "priority": 100,
+      "condition": {
+        "type": "optionSelected",
+        "eventId": "event_silent_lullaby_dream",
+        "optionId": "luna_resonance"
+      },
+      "rawCondition": "触发选项C",
+      "grade": "特殊结果（最佳）",
+      "report": "露娜轻轻哼起了一首古老的童谣。幽灵停止了哭泣，它借由露娜的魔法共鸣，向你们展示了它的记忆：一个古代母亲，抱着死去的孩子在此长眠。它对误闯此地的矿工并无恶意。露娜在梦中引导几个矿工自己走出了矿坑。巴托克再三道谢。",
+      "causalExplanation": "",
+      "guildChanges": "+500G；声望+1",
+      "heroChanges": "露娜声望提高，与菲尼克关系更好。",
+      "relationshipChanges": "露娜与菲尼克关系更好。",
+      "writtenFlags": [
+        "miners_rescued"
+      ],
+      "unlockedContent": [
+        "luna_personal_dialogue"
+      ],
+      "followUpEvents": [],
+      "effects": [
+        {
+          "type": "addGuildGold",
+          "amount": 500
+        },
+        {
+          "type": "addReputation",
+          "amount": 1
+        },
+        {
+          "type": "setFlag",
+          "flagId": "miners_rescued",
+          "value": true
+        },
+        {
+          "type": "unlockContent",
+          "contentId": "luna_personal_dialogue"
+        }
+      ],
+      "testObservation": ""
+    },
+    {
+      "id": "lullaby_soothe_success",
+      "questId": "quest_silent_lullaby",
+      "priority": 80,
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "optionSelected",
+            "eventId": "event_silent_lullaby_dream",
+            "optionId": "soothe"
+          },
+          {
+            "type": "partyStatAtLeast",
+            "stat": "social",
+            "value": 3
+          }
+        ]
+      },
+      "rawCondition": "触发选项B，且队伍交涉≥3（如塞拉、艾利乌斯）",
+      "grade": "成功",
+      "report": "英雄们强忍着困意，用温和的话语安抚了幽灵。它明白了矿工们不是来伤害它的，哭声逐渐停止，化为了光点消失。矿工们在矿坑深处被发现，除了有点虚弱，并无大碍。",
+      "causalExplanation": "",
+      "guildChanges": "+400G",
+      "heroChanges": "无",
+      "relationshipChanges": "",
+      "writtenFlags": [
+        "banshee_vanished",
+        "miners_rescued"
+      ],
+      "unlockedContent": [],
+      "followUpEvents": [],
+      "effects": [
+        {
+          "type": "addGuildGold",
+          "amount": 400
+        },
+        {
+          "type": "setFlag",
+          "flagId": "banshee_vanished",
+          "value": true
+        },
+        {
+          "type": "setFlag",
+          "flagId": "miners_rescued",
+          "value": true
+        }
+      ],
+      "testObservation": ""
+    },
+    {
+      "id": "lullaby_fight_win",
+      "questId": "quest_silent_lullaby",
+      "priority": 60,
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "optionSelected",
+            "eventId": "event_silent_lullaby_dream",
+            "optionId": "attack"
+          },
+          {
+            "type": "partyStatAtLeast",
+            "stat": "combat",
+            "value": 5
+          }
+        ]
+      },
+      "rawCondition": "触发选项A，且战斗≥5（如泽克）",
+      "grade": "成功/代价",
+      "report": "英雄们用强大的武力击溃了那个幽灵。它在消散前发出了撕心裂肺的悲鸣，仿佛失去了一切。在矿坑深处，他们找到了三名矿工……他们再也不会醒来了，脸上还带着安详的微笑。巴托克悲痛地付了钱，没有多说什么。",
+      "causalExplanation": "",
+      "guildChanges": "+300G；声望-1",
+      "heroChanges": "执行者（如泽克）获得“冷酷”的隐藏评价。",
+      "relationshipChanges": "",
+      "writtenFlags": [
+        "banshee_vanished"
+      ],
+      "unlockedContent": [
+        "north_mine_vengeful_spirit_followup"
+      ],
+      "followUpEvents": [],
+      "effects": [
+        {
+          "type": "addGuildGold",
+          "amount": 300
+        },
+        {
+          "type": "addReputation",
+          "amount": -1
+        },
+        {
+          "type": "setFlag",
+          "flagId": "banshee_vanished",
+          "value": true
+        },
+        {
+          "type": "note",
+          "text": "执行者获得“冷酷”的隐藏评价。"
+        },
+        {
+          "type": "unlockContent",
+          "contentId": "north_mine_vengeful_spirit_followup"
+        }
+      ],
+      "testObservation": ""
+    },
+    {
+      "id": "lullaby_fight_fail",
+      "questId": "quest_silent_lullaby",
+      "priority": 40,
+      "condition": {
+        "type": "optionSelected",
+        "eventId": "event_silent_lullaby_dream",
+        "optionId": "attack"
+      },
+      "rawCondition": "触发选项A，且战斗<5（如莉亚）",
+      "grade": "失败",
+      "report": "英雄的攻击激怒了幽灵，爆发的灵力冲击波让整个矿坑都摇摇欲坠。英雄们在塌方前拖着昏睡过去的矿工逃了出来，但其中一名矿工在混乱中头撞到岩石，不幸身亡。英雄自己也受了伤。",
+      "causalExplanation": "高优先级的战斗≥5结果未命中后，本结果接收剩余攻击选择。",
+      "guildChanges": "-200G（医药费）；声望-1",
+      "heroChanges": "派遣英雄全体轻伤。",
+      "relationshipChanges": "",
+      "writtenFlags": [
+        "miners_half_rescued"
+      ],
+      "unlockedContent": [],
+      "followUpEvents": [],
+      "effects": [
+        {
+          "type": "addGuildGold",
+          "amount": -200
+        },
+        {
+          "type": "addReputation",
+          "amount": -1
+        },
+        {
+          "type": "setFlag",
+          "flagId": "miners_half_rescued",
+          "value": true
+        },
+        {
+          "type": "note",
+          "text": "派遣英雄全体轻伤。"
+        }
+      ],
+      "testObservation": ""
+    },
+    {
+      "id": "lullaby_default",
+      "questId": "quest_silent_lullaby",
+      "priority": 10,
+      "condition": {
+        "type": "all",
+        "conditions": []
+      },
+      "rawCondition": "未触发任何特殊选项，仅派单人调查",
+      "grade": "默认结果",
+      "report": "单人进入的英雄没有回来。第二天，巴托克去寻人时，发现英雄和三个矿工一起躺在矿坑深处，脸上带着幸福的微笑，沉沉睡去……",
+      "causalExplanation": "",
+      "guildChanges": "任务失败，需要组织新的救援队。",
+      "heroChanges": "派遣英雄状态变为“离队”（沉睡）。",
+      "relationshipChanges": "",
+      "writtenFlags": [],
+      "unlockedContent": [
+        "new_rescue_quest"
+      ],
+      "followUpEvents": [],
+      "effects": [
+        {
+          "type": "note",
+          "text": "派遣英雄状态变为“离队”（沉睡）。"
+        },
+        {
+          "type": "unlockContent",
+          "contentId": "new_rescue_quest"
+        }
+      ],
+      "testObservation": ""
+    },
+    {
+      "id": "shepherd_truth_told",
+      "questId": "quest_shepherd_legacy",
+      "priority": 100,
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "any",
+            "conditions": [
+              {
+                "type": "optionSelected",
+                "eventId": "event_shepherd_legacy_night",
+                "optionId": "identify"
+              },
+              {
+                "type": "optionSelected",
+                "eventId": "event_shepherd_legacy_night",
+                "optionId": "retreat"
+              }
+            ]
+          },
+          {
+            "type": "partyStatAtLeast",
+            "stat": "social",
+            "value": 3
+          }
+        ]
+      },
+      "rawCondition": "触发选项C或A，且成功说服柯尔姆",
+      "grade": "特殊结果（最佳）",
+      "report": "英雄识破了真相，并带着耐心向老柯尔姆解释了羊群的死因和腐食甲虫的习性。老人起先不信，但在看到莉亚带来的证据后，他瘫坐在地上，老泪纵横。他给了英雄那件旧羊皮大衣作为谢礼，那本是为他儿子准备的。",
+      "causalExplanation": "",
+      "guildChanges": "+100G，获得特殊物品“父亲的羊皮大衣”（+交涉，特殊剧情道具）。",
+      "heroChanges": "英雄声望微升。",
+      "relationshipChanges": "",
+      "writtenFlags": [
+        "beetle_colony_safe",
+        "old_shepherd_accepts"
+      ],
+      "unlockedContent": [
+        "father_sheepskin_coat"
+      ],
+      "followUpEvents": [],
+      "effects": [
+        {
+          "type": "addGuildGold",
+          "amount": 100
+        },
+        {
+          "type": "setFlag",
+          "flagId": "beetle_colony_safe",
+          "value": true
+        },
+        {
+          "type": "setFlag",
+          "flagId": "old_shepherd_accepts",
+          "value": true
+        },
+        {
+          "type": "unlockContent",
+          "contentId": "father_sheepskin_coat"
+        },
+        {
+          "type": "note",
+          "text": "英雄声望微升。"
+        }
+      ],
+      "testObservation": ""
+    },
+    {
+      "id": "shepherd_mercy_kill",
+      "questId": "quest_shepherd_legacy",
+      "priority": 80,
+      "condition": {
+        "type": "optionSelected",
+        "eventId": "event_shepherd_legacy_night",
+        "optionId": "retreat"
+      },
+      "rawCondition": "未识破甲虫，但命令不攻击（选项A）",
+      "grade": "成功",
+      "report": "英雄认为不该招惹数量众多的未知生物，于是安全返回。他们告诉柯尔姆“怪物”已经跑了。老柯尔姆虽然不满足，但也接受了这个说法，他至少觉得出了一口气。",
+      "causalExplanation": "高优先级的说服结果未命中后，本结果接收剩余撤退选择。",
+      "guildChanges": "+100G。",
+      "heroChanges": "无。",
+      "relationshipChanges": "",
+      "writtenFlags": [
+        "beetle_colony_safe",
+        "old_shepherd_unresolved"
+      ],
+      "unlockedContent": [],
+      "followUpEvents": [],
+      "effects": [
+        {
+          "type": "addGuildGold",
+          "amount": 100
+        },
+        {
+          "type": "setFlag",
+          "flagId": "beetle_colony_safe",
+          "value": true
+        },
+        {
+          "type": "setFlag",
+          "flagId": "old_shepherd_unresolved",
+          "value": true
+        }
+      ],
+      "testObservation": ""
+    },
+    {
+      "id": "shepherd_massacre",
+      "questId": "quest_shepherd_legacy",
+      "priority": 60,
+      "condition": {
+        "type": "all",
+        "conditions": [
+          {
+            "type": "optionSelected",
+            "eventId": "event_shepherd_legacy_night",
+            "optionId": "attack"
+          },
+          {
+            "type": "partyStatAtLeast",
+            "stat": "combat",
+            "value": 3
+          }
+        ]
+      },
+      "rawCondition": "触发选项B，且战斗≥3",
+      "grade": "成功/代价",
+      "report": "英雄大开杀戒，将那个刚迁徙来的、无害的腐食甲虫族群屠戮殆尽。老柯尔姆非常高兴，用仅有的钱买了劣酒来感谢英雄。任务被记为“完美解决”。但在生物学者的圈子里，公会的名声变差了。",
+      "causalExplanation": "",
+      "guildChanges": "+100G；调查类委托报酬-10%（隐藏）。",
+      "heroChanges": "执行者获得“盲目”的隐藏评价。",
+      "relationshipChanges": "",
+      "writtenFlags": [
+        "beetle_colony_extinct"
+      ],
+      "unlockedContent": [],
+      "followUpEvents": [],
+      "effects": [
+        {
+          "type": "addGuildGold",
+          "amount": 100
+        },
+        {
+          "type": "setFlag",
+          "flagId": "beetle_colony_extinct",
+          "value": true
+        },
+        {
+          "type": "note",
+          "text": "调查类委托报酬-10%（隐藏）；执行者获得“盲目”的隐藏评价；老柯尔姆活在虚假的慰藉中。"
+        }
+      ],
+      "testObservation": ""
+    },
+    {
+      "id": "shepherd_fight_back",
+      "questId": "quest_shepherd_legacy",
+      "priority": 40,
+      "condition": {
+        "type": "optionSelected",
+        "eventId": "event_shepherd_legacy_night",
+        "optionId": "attack"
+      },
+      "rawCondition": "触发选项B，但战斗<3（如莉亚）",
+      "grade": "失败",
+      "report": "英雄试图攻击，但甲虫数量众多，它们喷射出一种恶臭的体液自卫。英雄被迫撤退，还被轻度腐蚀伤。老柯尔姆对公会表示了失望。",
+      "causalExplanation": "高优先级的战斗≥3结果未命中后，本结果接收剩余攻击选择。",
+      "guildChanges": "-100G（治疗费）；声望-1。",
+      "heroChanges": "派遣英雄轻伤，交涉-1（身上有臭味，持续1天）。",
+      "relationshipChanges": "",
+      "writtenFlags": [
+        "beetle_colony_wary"
+      ],
+      "unlockedContent": [],
+      "followUpEvents": [],
+      "effects": [
+        {
+          "type": "addGuildGold",
+          "amount": -100
+        },
+        {
+          "type": "addReputation",
+          "amount": -1
+        },
+        {
+          "type": "setFlag",
+          "flagId": "beetle_colony_wary",
+          "value": true
+        },
+        {
+          "type": "note",
+          "text": "派遣英雄轻伤，交涉-1（身上有臭味，持续1天）。甲虫变得更具攻击性，成为真正的威胁。"
+        }
+      ],
+      "testObservation": ""
+    },
+    {
+      "id": "shepherd_doubt",
+      "questId": "quest_shepherd_legacy",
+      "priority": 10,
+      "condition": {
+        "type": "all",
+        "conditions": []
+      },
+      "rawCondition": "什么都没发现就返回。",
+      "grade": "默认结果",
+      "report": "英雄没等到傍晚就回来了，告诉柯尔姆什么也没找到。柯尔姆愤怒地指责公会是骗子，并把他最后的积蓄扔在了地上。",
+      "causalExplanation": "",
+      "guildChanges": "无报酬，声望-2。",
+      "heroChanges": "无。",
+      "relationshipChanges": "",
+      "writtenFlags": [],
+      "unlockedContent": [],
+      "followUpEvents": [],
+      "effects": [
+        {
+          "type": "addReputation",
+          "amount": -2
+        },
+        {
+          "type": "note",
+          "text": "柯尔姆对公会的好感降至冰点。"
+        }
+      ],
+      "testObservation": ""
+    }
+  ],
+  "flags": [
+    {
+      "id": "team_separated",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "血液盛宴中队伍是否分头行动。"
+    },
+    {
+      "id": "investigate_first",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "血液盛宴中是否优先核验痕迹。"
+    },
+    {
+      "id": "quest_aborted",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "当前任务是否中止。"
+    },
+    {
+      "id": "r_bloodlust_revealed",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "凛的嗜杀倾向是否揭露。"
+    },
+    {
+      "id": "r_bloodlust_suppressed",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "凛的嗜杀倾向是否被戴禛抑制。"
+    },
+    {
+      "id": "d_injured",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "戴禛是否在血液盛宴中受伤。"
+    },
+    {
+      "id": "east_village_massacre",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "东方村庄是否发生大规模死亡。"
+    },
+    {
+      "id": "east_village_cult_exposed",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "东方村庄邪教是否暴露。"
+    },
+    {
+      "id": "guild_reputation_crisis",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "公会是否陷入声誉危机。"
+    },
+    {
+      "id": "girl_becomes_adventurer",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "贵族女孩是否成为冒险者。"
+    },
+    {
+      "id": "noble_retaliation",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "贵族是否展开报复。"
+    },
+    {
+      "id": "dungeon_awakening",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "旧地牢是否苏醒。"
+    },
+    {
+      "id": "new_hero_unlock",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "是否解锁新英雄。"
+    },
+    {
+      "id": "seal_broken",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "矿坑古代封印是否破损。"
+    },
+    {
+      "id": "lullaby_attacked",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "玩家是否下令攻击幽灵。"
+    },
+    {
+      "id": "lullaby_soothe",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "玩家是否下令安抚幽灵。"
+    },
+    {
+      "id": "lullaby_luna_resonance",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "露娜是否使用魔法共鸣。"
+    },
+    {
+      "id": "banshee_vanished",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "矿坑幽灵是否消失。"
+    },
+    {
+      "id": "miners_rescued",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "失踪矿工是否全部获救。"
+    },
+    {
+      "id": "miners_half_rescued",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "失踪矿工是否仅部分获救。"
+    },
+    {
+      "id": "beetle_colony_status",
+      "valueType": "string",
+      "initialValue": "unknown",
+      "description": "腐食甲虫族群的概括状态。"
+    },
+    {
+      "id": "old_shepherd_mental_state",
+      "valueType": "string",
+      "initialValue": "grieving",
+      "description": "老牧羊人柯尔姆的心理状态。"
+    },
+    {
+      "id": "beetle_observed",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "是否观察到腐食甲虫。"
+    },
+    {
+      "id": "beetle_attack",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "是否下令攻击腐食甲虫。"
+    },
+    {
+      "id": "beetle_identified",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "是否识别腐食甲虫。"
+    },
+    {
+      "id": "beetle_colony_safe",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "腐食甲虫族群是否安全。"
+    },
+    {
+      "id": "old_shepherd_accepts",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "柯尔姆是否接受真相。"
+    },
+    {
+      "id": "old_shepherd_unresolved",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "柯尔姆的心结是否仍未解决。"
+    },
+    {
+      "id": "beetle_colony_extinct",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "腐食甲虫族群是否灭绝。"
+    },
+    {
+      "id": "beetle_colony_wary",
+      "valueType": "boolean",
+      "initialValue": false,
+      "description": "腐食甲虫是否因袭击而警惕并更具攻击性。"
+    }
+  ],
+  "sourceIssues": [
+    {
+      "id": "source_blood_outcomes_incomplete",
+      "severity": "gap",
+      "entityType": "quest",
+      "entityId": "quest_blood_feast",
+      "field": "outcomeIds",
+      "code": "missing-structure",
+      "message": "原案只有一个结果示例，不是完整结果组；工作台不补写其余结果。",
+      "sourceText": "结果组ID：outcome_blood_feast；现有示例结果：blood_feast_r_massacre。"
+    },
+    {
+      "id": "source_left_event_missing",
+      "severity": "gap",
+      "entityType": "quest",
+      "entityId": "quest_left_or_right",
+      "field": "eventIds",
+      "code": "missing-structure",
+      "message": "原案只有中途事件概述，没有结构化正文、选项与变化。",
+      "sourceText": "event_left_or_right_garden（英雄在森林中发现树洞入口，需要决定是否当着贵族的面打开封印）"
+    },
+    {
+      "id": "source_left_outcomes_missing",
+      "severity": "gap",
+      "entityType": "quest",
+      "entityId": "quest_left_or_right",
+      "field": "outcomeIds",
+      "code": "missing-structure",
+      "message": "原案声明了结果组ID，但没有结果条目；工作台不生成空白假结果。",
+      "sourceText": "outcome_left_or_right"
+    },
+    {
+      "id": "source_lullaby_unresolved_heroes",
+      "severity": "warning",
+      "entityType": "quest",
+      "entityId": "quest_silent_lullaby",
+      "field": "keyTraitsAndCombinations",
+      "code": "unresolved-reference",
+      "message": "原案引用了不在 APRD 种子中的角色；保留文字与ID，不补建角色。",
+      "sourceText": "露娜、盖尔、泽克、葛林姆",
+      "unresolvedIds": [
+        "hero_luna",
+        "hero_gale",
+        "hero_zeke",
+        "hero_grimm"
+      ]
+    },
+    {
+      "id": "source_lullaby_option_luna",
+      "severity": "warning",
+      "entityType": "event",
+      "entityId": "event_silent_lullaby_dream",
+      "field": "options.luna_resonance.visibleCondition",
+      "code": "unresolved-reference",
+      "message": "露娜未包含在 APRD 种子中；该选项被保留，但用 APRD 预览时不会出现。",
+      "sourceText": "仅当队伍中有露娜时出现",
+      "unresolvedIds": [
+        "hero_luna"
+      ]
+    },
+    {
+      "id": "source_shepherd_unresolved_heroes",
+      "severity": "warning",
+      "entityType": "quest",
+      "entityId": "quest_shepherd_legacy",
+      "field": "keyTraitsAndCombinations",
+      "code": "unresolved-reference",
+      "message": "原案引用了不在 APRD 种子中的角色；保留文字与ID，不补建角色。",
+      "sourceText": "莉亚、盖尔、泽克",
+      "unresolvedIds": [
+        "hero_lyra",
+        "hero_gale",
+        "hero_zeke"
+      ]
+    },
+    {
+      "id": "source_shepherd_option_lyra",
+      "severity": "warning",
+      "entityType": "event",
+      "entityId": "event_shepherd_legacy_night",
+      "field": "options.identify.visibleCondition",
+      "code": "unresolved-reference",
+      "message": "莉亚未包含在 APRD 种子中；该选项被保留，但用 APRD 预览时不会出现。",
+      "sourceText": "仅当队伍中有莉亚时出现",
+      "unresolvedIds": [
+        "hero_lyra"
+      ]
+    },
+    {
+      "id": "source_blood_condition_partial",
+      "severity": "warning",
+      "entityType": "outcome",
+      "entityId": "blood_feast_r_massacre",
+      "field": "condition",
+      "code": "unmapped-condition",
+      "message": "“未下达控制伤亡命令”在原案中没有对应Flag，不能可靠结构化；原文已保留在 rawCondition。",
+      "sourceText": "队伍含R和D；二人分开；D遇险；未下达控制伤亡命令"
+    },
+    {
+      "id": "source_blood_followup_unresolved",
+      "severity": "warning",
+      "entityType": "outcome",
+      "entityId": "blood_feast_r_massacre",
+      "field": "followUpEvents",
+      "code": "unresolved-reference",
+      "message": "后续领主赔偿事件只有ID，没有事件正文。",
+      "sourceText": "event_lord_compensation",
+      "unresolvedIds": [
+        "event_lord_compensation"
+      ]
+    },
+    {
+      "id": "source_shepherd_persuasion_inferred",
+      "severity": "warning",
+      "entityType": "outcome",
+      "entityId": "shepherd_truth_told",
+      "field": "condition",
+      "code": "source-ambiguity",
+      "message": "原案没有定义“成功说服”的数值门槛；v0.1 暂以队伍交涉≥3表示，并保留原文供后续裁决。",
+      "sourceText": "触发选项C或A，且成功说服柯尔姆"
+    }
+  ]
+}
