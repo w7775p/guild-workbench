@@ -1,0 +1,6 @@
+[application]
+config/name="Guild Today Open As Usual"
+run/main_scene="res://tests/vertical_slice_test.tscn"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
