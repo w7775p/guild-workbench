@@ -1,4 +1,4 @@
 extends Node
 
 func _ready():
-	print("Guild vertical slice skeleton loaded")
+	print("Guild Today Open As Usual boot success")
